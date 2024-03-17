@@ -8,7 +8,7 @@ export class HelloCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     const handler = new Function(this, 'Hello-lambda', {
-      runtime: Runtime.NODEJS_14_X,
+      runtime: Runtime.NODEJS_16_X,
       memorySize: 512,
       handler: 'app.handler',
       code: Code.fromAsset(join(__dirname, '../lambdas'))
